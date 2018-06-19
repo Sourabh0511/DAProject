@@ -1,0 +1,11 @@
+import csv
+
+csv_file = "sarcasm_v2.csv.csv"
+output_file = "ProcessedDataset.txt"
+
+with open(csv_file, 'r') as inf:
+    reader = csv.reader(inf)
+    print(reader)
+    with open(output_file, 'w') as out:
+        writer = csv.writer(out, delimiter='\t')
+        writer.writerows(reader)
